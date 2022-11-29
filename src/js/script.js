@@ -465,7 +465,7 @@ function main() {
       {
         name: "creditos1",
         draw: true,
-        translation: [14.5, -25, 0],
+        translation: [14, -25, 0],
         rotation: [degToRad(0), degToRad(0), degToRad(0)],
         children: [],
         texture: tex.credito,
@@ -483,7 +483,7 @@ function main() {
       {
         name: "creditos3",
         draw: true,
-        translation: [21.5, -25, 0],
+        translation: [22, -25, 0],
         rotation: [degToRad(0), degToRad(0), degToRad(0)],
         children: [],
         texture: tex.credito3,
@@ -492,7 +492,7 @@ function main() {
       {
         name: "creditos4",
         draw: true,
-        translation: [25, -25, 0],
+        translation: [26, -25, 0],
         rotation: [degToRad(0), degToRad(0), degToRad(0)],
         children: [],
         texture: tex.credito4,
@@ -752,10 +752,10 @@ function drawScene(now) {
   nodeInfosByName["creditos3"].trs.scale = [2, 1, 0.2];
   nodeInfosByName["creditos4"].trs.scale = [2, 1, 0.2];
 
-  nodeInfosByName["creditos1"].trs.rotation[0] = now / 2;
-  nodeInfosByName["creditos2"].trs.rotation[1] = now / 2;
-  nodeInfosByName["creditos3"].trs.rotation[2] = now / 2;
-  nodeInfosByName["creditos4"].trs.rotation[0] = now / 2;
+  // nodeInfosByName["creditos1"].trs.rotation[0] += 0.5;
+  // nodeInfosByName["creditos2"].trs.rotation[1] = now / 2;
+  // nodeInfosByName["creditos3"].trs.rotation[2] = now / 2;
+  // nodeInfosByName["creditos4"].trs.rotation[0] = now / 2;
 
   arrLuz[2].position.x = nodeInfosByName["tiro"].trs.translation[0];
   arrLuz[2].position.y = nodeInfosByName["tiro"].trs.translation[1];
