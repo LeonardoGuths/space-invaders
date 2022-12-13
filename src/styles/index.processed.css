@@ -3,6 +3,7 @@
 
 body {
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 canvas {
   width: 100vw;
@@ -11,13 +12,33 @@ canvas {
   background-image: url("space.jpg");
   /* background-color: black; */
 }
+.controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  border: 0.5px solid #09ff00;
+  box-shadow: 0 0 5px #09ff00, 0 0 10px #09ff00;
+  padding: 2px 8px;
+}
+
+.controls h2 {
+  padding: 0;
+  margin: 0;
+  filter: drop-shadow(0 0 3px #09ff00);
+  text-decoration: underline;
+}
+
+.controls p {
+  padding: 0;
+  margin: 0;
+}
 
 .information {
   position: absolute;
   bottom: 5px;
   left: 5px;
   color: white;
-  font-family: "Montserrat", sans-serif;
 }
 
 .information h1 {
