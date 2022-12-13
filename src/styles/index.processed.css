@@ -1,4 +1,6 @@
 @import url("https://webgl2fundamentals.org/webgl/resources/webgl-tutorials.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
 body {
   margin: 0;
 }
@@ -8,4 +10,41 @@ canvas {
   display: block;
   background-image: url("space.jpg");
   /* background-color: black; */
+}
+
+.information {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.information h1 {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.information h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.information h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: white;
+  filter: drop-shadow(0 0 5px #6617fc);
 }
