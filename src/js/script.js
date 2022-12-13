@@ -752,10 +752,10 @@ function drawScene(now) {
   nodeInfosByName["creditos3"].trs.scale = [2, 1, 0.2];
   nodeInfosByName["creditos4"].trs.scale = [2, 1, 0.2];
 
-  // nodeInfosByName["creditos1"].trs.rotation[0] += 0.5;
-  // nodeInfosByName["creditos2"].trs.rotation[1] = now / 2;
-  // nodeInfosByName["creditos3"].trs.rotation[2] = now / 2;
-  // nodeInfosByName["creditos4"].trs.rotation[0] = now / 2;
+  nodeInfosByName["creditos1"].trs.rotation[0] = now / 2;
+  nodeInfosByName["creditos2"].trs.rotation[1] = now / 2;
+  nodeInfosByName["creditos3"].trs.rotation[2] = now / 2;
+  nodeInfosByName["creditos4"].trs.rotation[0] = now / 2;
 
   arrLuz[2].position.x = nodeInfosByName["tiro"].trs.translation[0];
   arrLuz[2].position.y = nodeInfosByName["tiro"].trs.translation[1];
