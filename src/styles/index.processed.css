@@ -25,7 +25,7 @@ canvas {
 .controls h2 {
   padding: 0;
   margin: 0;
-  filter: drop-shadow(0 0 3px #09ff00);
+  filter: drop-shadow(0 0 9px #09ff00);
   text-decoration: underline;
 }
 
