@@ -3,6 +3,7 @@ var config = {
   enemy1_skin: "spaceinvader2",
   enemy2_skin: "spaceinvaderW",
   modo_fps: false,
+  sound: true,
 };
 
 //fixed cameras variables
@@ -27,4 +28,5 @@ const loadGUI = () => {
     }
   });
   gui.add(config, "modo_fps");
+  gui.add(config, "sound");
 };

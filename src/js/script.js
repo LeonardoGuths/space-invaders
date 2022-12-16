@@ -53,7 +53,7 @@ var atingiuBarreira = false;
 var atingiuTiro = false;
 var youLose = false;
 var enemiesKilled = [0];
-var listTex = ["spaceship", "valeu"];
+var listTex = ["spaceship", "amongus", "valeu"];
 var enemyListTex = [
   "spaceinvaderW",
   "spaceinvader2",
@@ -61,10 +61,6 @@ var enemyListTex = [
   "wireframeW",
   "toto",
 ];
-
-let youwinAudio = new Audio(
-  "http://127.0.0.1:5500/space%20invaders/index.html"
-);
 
 var arrLuz = [
   new Luz([0, 2.25, 20], [100, 100, 100], [255, 255, 255], 5000),
@@ -76,6 +72,17 @@ var arrLuz = [
 var cameraPosition;
 var target;
 var up;
+
+//AUDIOS
+let amongusStart = new Audio("./src/sound/amongus_start.mp3");
+let laserGun = new Audio("./src/sound/laser_gun.mp3");
+let amongusKill = new Audio("./src/sound/amongus_kill.mp3");
+let bambooHit = new Audio("./src/sound/bamboo_hit.mp3");
+let imposterWin = new Audio("./src/sound/imposter_win.mp3");
+let crewWin = new Audio("./src/sound/crew_win.mp3");
+let taskComplete = new Audio("./src/sound/task_complete.mp3");
+
+// amongusCorpse.volume = 0.02;
 
 function makeNode(nodeDescription) {
   var trs = new TRS();
@@ -161,6 +168,9 @@ function main() {
     },
     cg_book: {
       src: "./texture/cg_book.png",
+    },
+    amongus: {
+      src: "./texture/amongus.png",
     },
     valeu: {
       src: "./texture/valeu.png",
@@ -570,6 +580,12 @@ function main() {
   config.vx = temp[0];
   config.vy = temp[1];
   config.vz = temp[2];
+
+  if (config.sound) {
+    amongusStart.load();
+    amongusStart.play();
+  }
+
   //mapTexture();
   requestAnimationFrame(drawScene);
   //console.log(objects);
@@ -655,6 +671,11 @@ function drawScene(now) {
   if (darTiro) {
     if (startTiro) {
       startTiro = false;
+      if (config.sound) {
+        laserGun.load();
+        laserGun.play();
+      }
+
       arrLuz[2].color = [255, 0, 0];
 
       nodeInfosByName["tiro"].trs.translation = [

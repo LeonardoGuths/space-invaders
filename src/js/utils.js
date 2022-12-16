@@ -349,6 +349,12 @@ const computeMatrixPlayer = (player, tiro) => {
     removerTiro(tiro);
     youLose = true;
     console.log("PERDEU");
+    if (config.sound) {
+      bambooHit.load();
+      bambooHit.play();
+      imposterWin.load();
+      imposterWin.play();
+    }
   }
 };
 
@@ -372,6 +378,20 @@ const computeMatrixEnemy = (nodes, tiro, enemiesKilled) => {
       nodes[`space_invader_${index}`].trs.translation[1] = -9999;
       enemiesKilled[0] += 1;
       console.log(enemiesKilled[0]);
+
+      if (config.sound) {
+        amongusKill.load();
+        amongusKill.play();
+      }
+
+      if (enemiesKilled >= 14) {
+        if (config.sound) {
+          taskComplete.load();
+          taskComplete.play();
+          crewWin.load();
+          crewWin.play();
+        }
+      }
     }
   }
 };
